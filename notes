@@ -1,0 +1,32 @@
+import { use, useRef } from "react"
+
+const App = () => {
+  const refHeading = useRef(null)
+  const refInput = useRef(null)
+  const refLink = useRef(null)
+
+  const formSubmit = (e) => {
+    e.preventDefault()
+    // console.log(refInput.current.value)
+    // console.log(refInput.current.style.backgroundColor = "red")
+    // console.log(refInput.current.style.color = "purple")
+    // console.log(refHeading.current.style.color = "purple")
+    // console.log(refHeading.current.textContent = "Good job")
+    // console.log(refLink.current.textContent = "link")
+    console.log(refLink.current.href = "alena-pumprova.cz")
+    
+
+  }
+
+  return (
+    <section>
+      <h2 ref={refHeading}>Contact Form</h2>
+      <form onSubmit={formSubmit}>
+        <input type="text" ref={refInput}/>
+        <input type="submit" />
+      </form>
+      <a href="google.com" ref={refLink}>GOOGLE</a>
+    </section>
+  )
+}
+export default App
